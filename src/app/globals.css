@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-void: #0B0A09; /* Deep Black/Void */
+  --color-voidSoft: #141210;
+  --color-voidSofter: #1C1917;
+  --color-ember: #D9452F; 
+  --color-emberBright: #FF6B54; 
+  --color-moss: #7A9366; 
+  --color-amber: #F2BA63; 
+  --color-bone: #FFFFFF; /* Pure White (Primary Text) */
+  --color-boneDim: #D6D6D6; /* Bright Silver/Grey (Secondary Text) */
+  --color-gold: #D4B483; 
+  --color-deviRed: #A63030;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-burowai: var(--font-burowai), serif;
+  --font-galacthic: var(--font-galacthic), serif;
+  --font-quicksand: var(--font-quicksand), sans-serif;
+  --font-devanagari: var(--font-devanagari), serif;
+
+  --animate-flicker: flicker 4s ease-in-out infinite;
+  --animate-drift: drift 9s ease-in-out infinite;
+  --animate-rotateRay: rotateRay 30s linear infinite;
+
+  @keyframes flicker {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.95); }
+  }
+  @keyframes drift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(15px, -15px); }
+  }
+  @keyframes rotateRay {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  color: var(--color-bone);
+  font-family: var(--font-quicksand), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Soft Bloom Text Shadow (Terracotta for Light Theme) */
+.glow-text {
+  text-shadow: 0 0 25px rgba(179, 57, 39, 0.25), 0 0 10px rgba(179, 57, 39, 0.15);
+}
+
+[data-cursor="interactive"] {
+  cursor: pointer;
+}
+
+@media (pointer: coarse) {
+  /* No custom cursor on touch devices */
+  [data-cursor="interactive"] {
+    cursor: default;
+  }
 }
