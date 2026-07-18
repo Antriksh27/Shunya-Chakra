@@ -99,8 +99,10 @@ export function ScrollVideo() {
         targetIndex = progress * (totalFrames - 1);
       }
 
-      // 3. Smooth the index (lowered to 0.015 for ultra-buttery cinematic glide)
-      currentIndex += (targetIndex - currentIndex) * 0.015;
+      // 3. Smooth the index
+      // Since Lenis already provides buttery smooth scroll values, we use a higher lerp 
+      // here (0.2) to tightly couple the video to the scroll without lag.
+      currentIndex += (targetIndex - currentIndex) * 0.2;
       const frameToDraw = Math.round(currentIndex);
 
       // 4. Draw to canvas (only if frame changed to save GPU)
