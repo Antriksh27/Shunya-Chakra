@@ -60,7 +60,7 @@ export function Seekers() {
   };
 
   return (
-    <section id="seekers" className="relative min-h-screen py-32 bg-transparent flex flex-col items-center justify-center text-center">
+    <section id="seekers" className="relative min-h-screen py-20 md:py-32 bg-transparent flex flex-col items-center justify-center text-center">
       
       <div className="max-w-[1180px] mx-auto px-6vw flex flex-col items-center">
         
@@ -69,7 +69,7 @@ export function Seekers() {
           <div 
             ref={emblemRef}
             onClick={handleEmblemClick}
-            className="w-48 h-48 mb-16 rounded-full bg-[radial-gradient(circle_at_center,var(--color-ember)_0%,var(--color-void)_100%)] flex items-center justify-center cursor-pointer border border-bone/5 hover:border-gold/30 transition-colors duration-500"
+            className="w-32 h-32 md:w-48 md:h-48 mb-12 md:mb-16 rounded-full bg-[radial-gradient(circle_at_center,var(--color-ember)_0%,var(--color-void)_100%)] flex items-center justify-center cursor-pointer border border-bone/5 hover:border-gold/30 transition-colors duration-500"
             data-cursor="interactive"
             aria-label="Stone Spiral Emblem"
           >
@@ -99,7 +99,7 @@ export function Seekers() {
         </RevealOnScroll>
 
         <RevealOnScroll delay={0.2} className="max-w-3xl mb-12">
-          <h2 className="font-galacthic text-[clamp(22px,3vw,34px)] text-boneDim leading-[1.6]">
+          <h2 className="font-galacthic text-[clamp(18px,3vw,34px)] text-boneDim leading-[1.6]">
             We&apos;re looking for those who create with intention.
           </h2>
         </RevealOnScroll>

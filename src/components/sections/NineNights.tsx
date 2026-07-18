@@ -40,7 +40,7 @@ export function NineNights() {
 
       {/* Grid of Cards (scrolls up normally after wheel is unpinned) */}
       <div className="relative z-10 pt-24 pb-16">
-        <RevealOnScroll stagger={0.05} className="w-full max-w-[1300px] mx-auto flex flex-wrap justify-center gap-6 px-6vw">
+        <RevealOnScroll stagger={0.05} className="w-full max-w-[1300px] mx-auto flex flex-wrap justify-center gap-6 px-4 md:px-6vw">
         {CARDS.map((card, i) => (
           <FlipCard 
             key={i}

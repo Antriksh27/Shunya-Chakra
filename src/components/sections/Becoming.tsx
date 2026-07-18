@@ -27,9 +27,9 @@ export function Becoming() {
   }, [reducedMotion]);
 
   return (
-    <section id="becoming" ref={sectionRef} className="relative min-h-screen py-40 bg-transparent flex items-center justify-center overflow-hidden">
+    <section id="becoming" ref={sectionRef} className="relative min-h-screen py-20 md:py-40 bg-transparent flex items-center justify-center overflow-hidden">
       <div className="max-w-[1180px] mx-auto px-6vw text-center">
-        <div ref={textRef} className="max-w-3xl mx-auto space-y-8 font-quicksand text-boneDim text-[clamp(20px,2.4vw,28px)] leading-[1.8]">
+        <div ref={textRef} className="max-w-3xl mx-auto space-y-8 font-quicksand text-boneDim text-[clamp(18px,2.4vw,28px)] leading-[1.8]">
           <p>Every contribution becomes part of something greater.</p>
           <p>A space shaped together. A story shared together.</p>
           <p>Every artwork. Every rhythm.</p>

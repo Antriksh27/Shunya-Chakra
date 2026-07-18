@@ -59,7 +59,7 @@ function PillarCard({ pillar, index }: { pillar: typeof PILLARS[0], index: numbe
             {pillar.subtitle}
           </h4>
           
-          <div className={`font-quicksand text-boneDim text-[15px] leading-relaxed transition-all duration-300 overflow-hidden ${expanded ? 'max-h-[500px]' : 'max-h-[30px] md:max-h-[500px]'}`}>
+          <div className={`font-quicksand text-boneDim text-[15px] leading-relaxed transition-all duration-300 ${expanded ? '' : 'line-clamp-3 md:line-clamp-none'}`}>
             {pillar.text}
           </div>
           
@@ -116,7 +116,7 @@ export function Pillars() {
   }, [reducedMotion]);
 
   return (
-    <section id="pillars" ref={sectionRef} className="relative min-h-screen py-32 bg-transparent overflow-hidden">
+    <section id="pillars" ref={sectionRef} className="relative min-h-screen py-20 md:py-32 bg-transparent overflow-hidden">
       
       {/* Background imagery placeholder - Lazy loaded */}
       <div className="absolute inset-0 bg-transparent -z-20" />

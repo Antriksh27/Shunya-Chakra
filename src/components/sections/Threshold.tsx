@@ -82,7 +82,7 @@ export function Threshold() {
 
       {/* Main Content */}
       <div ref={introRef} className="flex flex-col items-center z-10 perspective-1000">
-        <div ref={markRef} className="transform-style-3d mb-8 relative w-32 h-32 md:w-48 md:h-48">
+        <div ref={markRef} className="transform-style-3d mb-8 relative w-24 h-24 md:w-48 md:h-48">
            <Image 
              src="/logo black.png" 
              alt="Shunya Chakra Mark"
@@ -92,11 +92,11 @@ export function Threshold() {
            />
         </div>
 
-        <h1 className="font-burowai text-[clamp(44px,8vw,96px)] leading-none text-bone tracking-widest uppercase mb-4 text-center">
+        <h1 className="font-burowai text-[clamp(32px,8vw,96px)] leading-none text-bone tracking-widest uppercase mb-4 text-center">
           Shunya Chakra
         </h1>
         
-        <h2 className="font-galacthic text-[clamp(20px,2.4vw,28px)] text-emberBright tracking-[0.3em] uppercase mb-12">
+        <h2 className="font-galacthic text-[clamp(16px,2.4vw,28px)] text-emberBright tracking-[0.3em] uppercase mb-12">
           Garba
         </h2>
 

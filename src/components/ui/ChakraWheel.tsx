@@ -105,11 +105,11 @@ export function ChakraWheel() {
       
       {/* Fixed Marker (Top) */}
       <div className="absolute top-2 z-20 flex flex-col items-center pointer-events-none">
-        <div className="font-devanagari text-2xl text-bone mb-1 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] transition-all duration-300">
+        <div className="font-devanagari text-xl md:text-2xl text-bone mb-1 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] transition-all duration-300">
           {activeDevi.num}
         </div>
         <div 
-          className="font-burowai text-4xl uppercase tracking-widest transition-colors duration-300"
+          className="font-burowai text-2xl md:text-4xl uppercase tracking-widest transition-colors duration-300"
           style={{ color: activeDevi.color }}
         >
           {activeDevi.name}
@@ -126,7 +126,7 @@ export function ChakraWheel() {
         />
         <div 
           ref={wheelRef} 
-          className="w-full h-full rounded-full cursor-grab active:cursor-grabbing border-[4px] border-white/50 relative z-10"
+          className="w-full h-full rounded-full cursor-grab active:cursor-grabbing border-[4px] border-white/50 relative z-10 touch-none"
           data-cursor="drag"
         >
           {DEVIS.map((devi, i) => {

@@ -56,12 +56,12 @@ export function Origin() {
   }, { scope: sectionRef });
 
   return (
-    <section id="origin" ref={sectionRef} className="relative min-h-screen py-32 flex items-center justify-center bg-transparent overflow-hidden">
+    <section id="origin" ref={sectionRef} className="relative min-h-screen py-20 md:py-32 flex items-center justify-center bg-transparent overflow-hidden">
 
-      <div className="max-w-2xl mx-auto px-6vw text-center space-y-16 font-quicksand text-boneDim text-[clamp(22px,3vw,34px)] leading-[1.8]">
+      <div className="max-w-2xl mx-auto px-6vw text-center space-y-12 md:space-y-16 font-quicksand text-boneDim text-[clamp(18px,3vw,34px)] leading-[1.8]">
         
         <div className="stanza">
-          <h2 className="font-burowai text-[clamp(30px,4.4vw,54px)] text-bone uppercase mb-8 tracking-wide glow-text">
+          <h2 className="font-burowai text-[clamp(24px,4.4vw,54px)] text-bone uppercase mb-6 md:mb-8 tracking-wide glow-text">
             Shunya, Before Creation
           </h2>
           <p>
