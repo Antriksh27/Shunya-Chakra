@@ -6,7 +6,7 @@ import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useAudioFeedback } from '@/lib/useAudioFeedback';
 
 const DEVIS = [
-  { name: 'Shailaputri', color: '#E8792E', num: '१' }, 
+  { name: 'Shailputri', color: '#E8792E', num: '१' }, 
   { name: 'Brahmacharini', color: '#F2A93B', num: '२' }, 
   { name: 'Chandraghanta', color: '#D4AF37', num: '३' }, 
   { name: 'Kushmanda', color: '#98C87A', num: '४' }, 

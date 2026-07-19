@@ -8,15 +8,15 @@ import { RevealOnScroll } from '../ui/RevealOnScroll';
 import { ChakraWheel } from '../ui/ChakraWheel';
 
 const CARDS = [
-  { devanagari: '॥१॥', devi: 'Shailaputri', chakra: 'Root' },
-  { devanagari: '॥२॥', devi: 'Brahmacharini', chakra: 'Sacral' },
-  { devanagari: '॥३॥', devi: 'Chandraghanta', chakra: 'Solar Plexus' },
-  { devanagari: '॥४॥', devi: 'Kushmanda', chakra: 'Heart' },
-  { devanagari: '॥५॥', devi: 'Skandamata', chakra: 'Throat' },
-  { devanagari: '॥६॥', devi: 'Katyayani', chakra: 'Third Eye' },
-  { devanagari: '॥७॥', devi: 'Kalaratri', chakra: 'Crown' },
-  { devanagari: '॥८॥', devi: 'Mahagauri', chakra: 'Union' },
-  { devanagari: '॥९॥', devi: 'Siddhidatri', chakra: 'Zero Hour' },
+  { devanagari: '॥१॥', devi: 'Shailputri', text: 'The daughter of the mountain, symbolizing strength and nature.' },
+  { devanagari: '॥२॥', devi: 'Brahmacharini', text: 'The seeker of penance, representing devotion, wisdom, and peace.' },
+  { devanagari: '॥३॥', devi: 'Chandraghanta', text: 'The destroyer of demons, known for her courage and bravery.' },
+  { devanagari: '॥४॥', devi: 'Kushmanda', text: 'The creator of the cosmos, signifying creativity and cosmic energy.' },
+  { devanagari: '॥५॥', devi: 'Skandamata', text: 'The mother of Lord Skanda (Kartikeya), embodying compassion and motherhood.' },
+  { devanagari: '॥६॥', devi: 'Katyayani', text: 'The warrior goddess, revered for determination and courage.' },
+  { devanagari: '॥७॥', devi: 'Kalaratri', text: 'The fierce protector, known for her fearlessness and destruction of darkness.' },
+  { devanagari: '॥८॥', devi: 'Mahagauri', text: 'The symbol of purity and beauty, representing forgiveness and serenity.' },
+  { devanagari: '॥९॥', devi: 'Siddhidatri', text: 'The bestower of spiritual powers, symbolizing fulfillment and ultimate wisdom.' },
 ];
 
 export function NineNights() {
@@ -51,8 +51,8 @@ export function NineNights() {
             }
             back={
               <>
-                <h3 className="font-galacthic text-2xl text-bone mb-2 uppercase tracking-wider">{card.devi}</h3>
-                <span className="font-quicksand text-sm text-ember uppercase tracking-widest">{card.chakra}</span>
+                <h3 className="font-galacthic text-2xl text-bone mb-4 uppercase tracking-wider">{card.devi}</h3>
+                <p className="font-quicksand text-sm text-boneDim leading-relaxed">{card.text}</p>
               </>
             }
           />
