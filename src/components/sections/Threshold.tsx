@@ -12,7 +12,7 @@ export function Threshold() {
   const fgRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const particlesRef = useRef<HTMLDivElement>(null);
-  const btnRef = useRef<HTMLDivElement>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
 
   useGSAP(() => {
     // 1. PIN THE HERO SECTION
