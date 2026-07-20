@@ -102,7 +102,7 @@ export function Threshold() {
 
   return (
     <div ref={wrapperRef} className="threshold-wrapper w-full relative z-10">
-      <section id="threshold" ref={containerRef} className="relative w-full h-screen overflow-hidden bg-forestDark">
+      <section id="threshold" ref={containerRef} className="relative w-full h-[100dvh] overflow-hidden bg-forestDark">
         
         {/* Deep Background Layer */}
         <div ref={bgRef} className="absolute inset-0 -z-30 origin-center">

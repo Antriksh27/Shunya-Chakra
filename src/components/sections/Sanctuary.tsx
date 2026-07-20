@@ -76,7 +76,7 @@ export function Sanctuary() {
 
   return (
     <div className="sanctuary-wrapper w-full">
-      <section id="sanctuary" ref={containerRef} className="relative w-full h-screen bg-forestDark overflow-hidden z-20">
+      <section id="sanctuary" ref={containerRef} className="relative w-full h-[100dvh] bg-forestDark overflow-hidden z-20">
         
         {/* Horizontal Track (3 screens wide) */}
         <div ref={trackRef} className="absolute top-0 left-0 h-full w-[300vw] flex items-center">

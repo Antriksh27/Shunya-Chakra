@@ -103,7 +103,7 @@ export function InteractiveChakra() {
 
   return (
     <div className="chakra-wrapper w-full">
-      <section id="chakra" ref={containerRef} className="relative w-full h-screen flex items-center justify-start bg-forestDark overflow-hidden z-20 cursor-grab active:cursor-grabbing">
+      <section id="chakra" ref={containerRef} className="relative w-full h-[100dvh] flex items-center justify-start bg-forestDark overflow-hidden z-20 cursor-grab active:cursor-grabbing">
         
         {/* Dynamic Flashlight */}
         <div 

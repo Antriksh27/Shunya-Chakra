@@ -98,7 +98,7 @@ export function ClosingInvitation() {
   };
 
   return (
-      <section id="closing" ref={containerRef} className="relative w-full h-screen flex flex-col items-center justify-center bg-forestDark overflow-hidden z-20">
+      <section id="closing" ref={containerRef} className="relative w-full h-[100dvh] flex flex-col items-center justify-center bg-forestDark overflow-hidden z-20">
         
         {/* Absolute Darkness Transition from Philosophy */}
         <div ref={bgRef} className="absolute inset-0 bg-gradient-to-t from-black via-forestDark to-forestDark opacity-60 pointer-events-none scale-150 -top-[25vh]"></div>

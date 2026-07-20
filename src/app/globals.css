@@ -84,10 +84,12 @@
   transform: translateY(-1px);
 }
 
-body {
+body, html {
   background-color: var(--color-forestDark); /* Replaced void/transparent */
   color: var(--color-bone);
   font-family: var(--font-inter-tight), sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Soft Bloom Text Shadow (Terracotta for Light Theme) */

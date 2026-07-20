@@ -102,7 +102,7 @@ export function Waitlist() {
 
   return (
     <div className="waitlist-wrapper w-full relative z-20">
-      <section id="waitlist" ref={containerRef} className="relative w-full h-screen flex flex-col items-center justify-center bg-forestDark overflow-hidden">
+      <section id="waitlist" ref={containerRef} className="relative w-full h-[100dvh] flex flex-col items-center justify-center bg-forestDark overflow-hidden">
         
         {/* Deep Stone Forest Background */}
         <div ref={bgRef} className="absolute inset-0 -z-30 origin-center mix-blend-luminosity opacity-40">

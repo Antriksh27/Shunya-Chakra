@@ -68,7 +68,7 @@ export function Philosophy() {
 
   return (
     <div className="philosophy-wrapper w-full">
-      <section id="philosophy" ref={containerRef} className="relative w-full h-screen bg-forestDark overflow-hidden z-20 flex items-center justify-center">
+      <section id="philosophy" ref={containerRef} className="relative w-full h-[100dvh] bg-forestDark overflow-hidden z-20 flex items-center justify-center">
         
         {/* Absolute Darkness Void */}
         <div ref={bgRef} className="absolute inset-0 bg-gradient-to-b from-[#e6ddcf] via-forestDark to-forestDark opacity-10 pointer-events-none mix-blend-overlay scale-150 -top-[25vh]"></div>

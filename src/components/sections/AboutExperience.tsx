@@ -67,7 +67,7 @@ export function AboutExperience() {
 
   return (
     <div className="experience-wrapper w-full">
-      <section id="experience" ref={containerRef} className="relative w-full h-screen bg-[#e6ddcf] overflow-hidden z-30">
+      <section id="experience" ref={containerRef} className="relative w-full h-[100dvh] bg-[#e6ddcf] overflow-hidden z-30">
         
         {/* SVG Filter for Rough/Torn Edges applied to the sliding cards */}
         <svg width="0" height="0" className="absolute pointer-events-none">

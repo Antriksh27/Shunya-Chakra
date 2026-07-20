@@ -32,7 +32,7 @@ export default function Home() {
   }, [loaded]);
 
   return (
-    <main className="w-full min-h-screen relative text-warmIvory block">
+    <main className="w-full min-h-[100dvh] relative text-warmIvory block">
       {!loaded ? (
         <ThresholdLoader onComplete={() => setLoaded(true)} />
       ) : (
