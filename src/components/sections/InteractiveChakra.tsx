@@ -110,10 +110,10 @@ export function InteractiveChakra() {
         <div className="absolute right-[-40%] md:right-[-30%] top-1/2 -translate-y-1/2 w-[150vw] h-[150vw] md:w-[120vw] md:h-[120vw] z-10 flex items-center justify-center pointer-events-auto">
           <div ref={chakraRef} className="relative w-full h-full cursor-grab active:cursor-grabbing">
             <Image 
-              src="/images/chakra-new.png" 
+              src="/images/chakra-transparent.png" 
               alt="Ancient Wooden Chakra" 
               fill
-              className="object-contain mix-blend-screen opacity-90 drop-shadow-[0_0_50px_rgba(0,0,0,1)] pointer-events-none"
+              className="object-contain opacity-90 drop-shadow-[0_0_50px_rgba(0,0,0,1)] pointer-events-none"
               priority
               draggable={false}
             />
