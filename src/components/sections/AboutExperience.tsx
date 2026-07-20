@@ -113,10 +113,7 @@ export function AboutExperience() {
               {/* Title Content */}
               <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none">
                  
-                 <span className="font-cormorant text-charcoal/80 text-sm md:text-base uppercase tracking-[0.8em] mb-6 mix-blend-color-burn font-bold">
-                   Chapter {String(index + 1).padStart(2, '0')}
-                 </span>
-                 
+
                  {/* Massive Bleeding Typography */}
                  <h2 className="font-burowai text-[clamp(50px,15vw,350px)] text-charcoal leading-[0.75] mix-blend-color-burn opacity-90 drop-shadow-sm text-center whitespace-nowrap mb-12 transform scale-x-[1.1]">
                    {chapter.title}
