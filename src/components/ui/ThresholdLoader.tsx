@@ -42,10 +42,12 @@ export function ThresholdLoader({ onComplete }: { onComplete: () => void }) {
     }
   }, [reducedMotion]);
 
-  if (isDone || reducedMotion) return null;
+  // We do not return null here. The parent component (page.tsx) will unmount this component 
+  // when isDone becomes true. Returning null while GSAP is involved can cause insertBefore errors.
+  // if (isDone || reducedMotion) return null;
 
   return (
-    <div ref={loaderRef} className="fixed inset-0 z-[100] bg-void flex items-center justify-center">
+    <div ref={loaderRef} className="fixed inset-0 z-[100] bg-forestDark flex items-center justify-center">
       <div ref={imageRef} className="relative w-20 h-20 opacity-0">
         <Image 
           src="/Logo.png" 

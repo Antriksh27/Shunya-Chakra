@@ -1,48 +1,43 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { ScrollTrigger, useGSAP } from '@/lib/gsap';
 
 const SECTIONS = [
-  { id: 'threshold', label: 'Threshold' },
-  { id: 'origin', label: 'The Origin' },
-  { id: 'awakening', label: 'The Awakening' },
-  { id: 'nine-nights', label: 'The Chakra' },
-  { id: 'pillars', label: 'The Pillars' },
-  { id: 'seekers', label: 'The Seekers' },
-  { id: 'becoming', label: 'The Becoming' },
-  { id: 'invitation', label: 'The Invitation' },
+  { id: 'threshold', label: 'The Threshold' },
+  { id: 'philosophy', label: 'The Earth' },
+  { id: 'chakra', label: 'The Rhythm' },
+  { id: 'waitlist', label: 'The Calling' },
+  { id: 'experience', label: 'The Ritual' },
+  { id: 'closing', label: 'The Invitation' },
 ];
 
 export function SideNav() {
   const [activeId, setActiveId] = useState<string>('threshold');
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: '-50% 0px -50% 0px',
-      }
-    );
-
+  useGSAP(() => {
     SECTIONS.forEach((section) => {
-      const el = document.getElementById(section.id);
-      if (el) observer.observe(el);
+      ScrollTrigger.create({
+        trigger: `#${section.id}`,
+        start: 'top center',
+        end: 'bottom center',
+        onToggle: (self) => {
+          if (self.isActive) {
+            setActiveId(section.id);
+          }
+        }
+      });
     });
-
-    return () => observer.disconnect();
   }, []);
 
   const handleClick = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      if ((window as any).__lenis_instance && typeof (window as any).__lenis_instance.scrollTo === 'function') {
+        (window as any).__lenis_instance.scrollTo(el);
+      } else {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -59,7 +54,7 @@ export function SideNav() {
             data-cursor="interactive"
           >
             {/* Tooltip */}
-            <span className="absolute right-10 whitespace-nowrap font-quicksand text-xs uppercase tracking-widest text-bone opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            <span className="absolute right-10 whitespace-nowrap font-cormorant text-xs uppercase tracking-widest text-bone opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
               {section.label}
             </span>
             

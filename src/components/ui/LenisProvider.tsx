@@ -20,6 +20,7 @@ export function LenisProvider({ children }: { children: ReactNode }) {
     });
 
     lenis.on('scroll', ScrollTrigger.update);
+    (window as any).__lenis_instance = lenis;
 
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);

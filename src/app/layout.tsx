@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { burowai, galacthic, quicksand, devanagari } from "./fonts";
+import { burowai, galacthic, cormorant, interTight, devanagari } from "./fonts";
 import "./globals.css";
 
 import { LenisProvider } from "@/components/ui/LenisProvider";
 import { Cursor } from "@/components/ui/Cursor";
-import { AudioToggle } from "@/components/ui/AudioToggle";
-import { ScrollVideo } from "@/components/ui/ScrollVideo";
+import { StickyCTA } from "@/components/ui/StickyCTA";
 
 export const metadata: Metadata = {
   title: "Shunya Chakra | Garba",
-  description: "Before there was form, there was Shunya.",
+  description: "Where rhythm returns to its roots.",
 };
 
 export default function RootLayout({
@@ -18,8 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${burowai.variable} ${galacthic.variable} ${quicksand.variable} ${devanagari.variable}`}>
+    <html lang="en" className={`${burowai.variable} ${galacthic.variable} ${cormorant.variable} ${interTight.variable} ${devanagari.variable}`}>
       <body>
+        <div className="texture-paper"></div>
         {/* Global Grain Overlay (Increased to 5%) */}
         <div className="fixed inset-0 pointer-events-none z-[9999] opacity-[0.05] mix-blend-multiply">
           <svg className="w-full h-full">
@@ -35,8 +35,7 @@ export default function RootLayout({
 
         <LenisProvider>
           <Cursor />
-          <AudioToggle />
-          <ScrollVideo />
+          <StickyCTA />
           <div id="main-scroll-container" className="relative z-10 w-full min-h-screen">
             {children}
           </div>

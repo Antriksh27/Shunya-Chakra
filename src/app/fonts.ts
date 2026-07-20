@@ -1,5 +1,5 @@
 import localFont from 'next/font/local';
-import { Quicksand, Noto_Serif_Devanagari } from 'next/font/google';
+import { Noto_Serif_Devanagari, Cormorant_Garamond, Inter_Tight } from 'next/font/google';
 
 export const burowai = localFont({
   src: [
@@ -27,9 +27,17 @@ export const galacthic = localFont({
   fallback: ['Georgia', 'Times New Roman', 'serif'],
 });
 
-export const quicksand = Quicksand({
+export const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-quicksand',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
+
+export const interTight = Inter_Tight({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-inter-tight',
   display: 'swap',
 });
 

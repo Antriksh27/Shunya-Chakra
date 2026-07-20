@@ -5,14 +5,12 @@ import Image from 'next/image';
 import { gsap, useGSAP } from '@/lib/gsap';
 
 const MENU_LINKS = [
-  { id: 'threshold', label: 'Threshold' },
-  { id: 'origin', label: 'The Origin' },
-  { id: 'awakening', label: 'The Awakening' },
-  { id: 'nine-nights', label: 'The Chakra' },
-  { id: 'pillars', label: 'The Pillars' },
-  { id: 'seekers', label: 'The Seekers' },
-  { id: 'becoming', label: 'The Becoming' },
-  { id: 'invitation', label: 'The Invitation' },
+  { id: 'threshold', label: 'The Threshold' },
+  { id: 'philosophy', label: 'The Earth' },
+  { id: 'chakra', label: 'The Rhythm' },
+  { id: 'waitlist', label: 'The Calling' },
+  { id: 'experience', label: 'The Ritual' },
+  { id: 'closing', label: 'The Invitation' },
 ];
 
 export function GlobalMenu() {
@@ -31,7 +29,11 @@ export function GlobalMenu() {
     setTimeout(() => {
       const el = document.getElementById(id);
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
+        if ((window as any).__lenis_instance && typeof (window as any).__lenis_instance.scrollTo === 'function') {
+          (window as any).__lenis_instance.scrollTo(el);
+        } else {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }, 400);
   };
@@ -114,28 +116,31 @@ export function GlobalMenu() {
       {/* Full Screen Overlay */}
       <div 
         ref={overlayRef}
-        className="fixed inset-0 z-[90] bg-void/95 backdrop-blur-xl invisible opacity-0 flex flex-col items-center justify-center overflow-y-auto py-20"
+        className="fixed inset-0 z-[90] bg-[#1A1F14]/98 backdrop-blur-xl invisible opacity-0 flex flex-col justify-center overflow-y-auto"
       >
         {/* Dedicated Close Button */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-8 text-bone/60 hover:text-ember transition-colors font-quicksand uppercase tracking-[0.3em] text-xs z-50 p-4"
+          className="absolute top-6 right-24 md:top-8 md:right-32 h-16 md:h-20 flex items-center px-4 text-bone/60 hover:text-copper transition-colors font-cormorant uppercase tracking-[0.3em] text-xs z-50 hidden md:flex"
           data-cursor="interactive"
         >
-          Close Menu
+          Close
         </button>
 
         {/* Decorative elements behind menu */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full bg-ember/5 blur-[120px] pointer-events-none" />
 
-        <ul ref={linksRef} className="flex flex-col items-center gap-[clamp(12px,2.5vh,24px)] perspective-1000 relative z-10 w-full px-4">
-          {MENU_LINKS.map((link) => (
-            <li key={link.id} className="opacity-0">
+        <ul ref={linksRef} className="flex flex-col items-start justify-center h-full max-w-7xl mx-auto w-full px-8 md:px-24 gap-[clamp(8px,1.5vh,16px)] perspective-1000 relative z-10">
+          {MENU_LINKS.map((link, index) => (
+            <li key={link.id} className="opacity-0 group">
               <button
                 onClick={() => handleScrollTo(link.id)}
-                className="font-burowai text-[clamp(24px,5vh,48px)] uppercase tracking-widest text-bone/60 hover:text-ember transition-colors duration-500 focus:outline-none text-center"
+                className="font-cormorant text-[clamp(28px,7vh,90px)] uppercase tracking-[0.15em] text-bone/40 hover:text-warmIvory transition-all duration-700 ease-out focus:outline-none text-left flex items-baseline gap-6 md:gap-12 group-hover:translate-x-6"
                 data-cursor="interactive"
               >
+                <span className="text-[clamp(12px,1.5vh,16px)] font-sans opacity-40 font-light tracking-[0.3em] -translate-y-4 md:-translate-y-8">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
                 {link.label}
               </button>
             </li>
@@ -143,7 +148,7 @@ export function GlobalMenu() {
         </ul>
         
         {/* Footer info in menu */}
-        <div className="absolute bottom-8 font-quicksand text-boneDim/50 text-xs tracking-widest uppercase">
+        <div className="absolute bottom-8 font-cormorant text-boneDim/50 text-xs tracking-widest uppercase">
           Shunya Chakra
         </div>
       </div>

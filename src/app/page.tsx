@@ -1,38 +1,55 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { ScrollTrigger } from '@/lib/gsap';
 import { ThresholdLoader } from '@/components/ui/ThresholdLoader';
 import { Threshold } from '@/components/sections/Threshold';
-import { Origin } from '@/components/sections/Origin';
-import { Awakening } from '@/components/sections/Awakening';
-import { Pillars } from '@/components/sections/Pillars';
-import { Seekers } from '@/components/sections/Seekers';
-import { Becoming } from '@/components/sections/Becoming';
-import { Invitation } from '@/components/sections/Invitation';
-import { NineNights } from '@/components/sections/NineNights';
+import { Waitlist } from '@/components/sections/Waitlist';
+import { InteractiveChakra } from '@/components/sections/InteractiveChakra';
+
+import { AboutExperience } from '@/components/sections/AboutExperience';
+import { Philosophy } from '@/components/sections/Philosophy';
+import { ClosingInvitation } from '@/components/sections/ClosingInvitation';
 import { SideNav } from '@/components/ui/SideNav';
 import { GlobalMenu } from '@/components/ui/GlobalMenu';
+import { GlobalEnvironment } from '@/components/ui/GlobalEnvironment';
+import { GlobalAudio } from '@/components/ui/GlobalAudio';
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
 
+  useEffect(() => {
+    if (loaded) {
+      // Force GSAP to recalculate all pin spacers and trigger positions
+      // after all child sections have mounted. This prevents sections from
+      // scrolling up prematurely if they were calculated out of order.
+      const timer = setTimeout(() => {
+        ScrollTrigger.sort();
+        ScrollTrigger.refresh();
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [loaded]);
+
   return (
-    <main className="w-full flex flex-col min-h-screen">
-      <ThresholdLoader onComplete={() => setLoaded(true)} />
-      
-      {/* We wait for ThresholdLoader to finish before triggering entry animations in Threshold */}
-      {loaded && (
+    <main className="w-full min-h-screen relative text-warmIvory block">
+      {!loaded ? (
+        <ThresholdLoader onComplete={() => setLoaded(true)} />
+      ) : (
         <>
+          <GlobalEnvironment />
+          <GlobalAudio />
+          
           <GlobalMenu />
           <SideNav />
+          
           <Threshold />
-          <Origin />
-          <Awakening />
-          <NineNights />
-          <Pillars />
-          <Seekers />
-          <Becoming />
-          <Invitation />
+          <Philosophy />
+
+          <InteractiveChakra />
+          <Waitlist />
+          <AboutExperience />
+          <ClosingInvitation />
         </>
       )}
     </main>

@@ -1,46 +1,93 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-void: #0B0A09; /* Deep Black/Void */
-  --color-voidSoft: #141210;
-  --color-voidSofter: #1C1917;
-  --color-ember: #D9452F; 
-  --color-emberBright: #FF6B54; 
-  --color-moss: #7A9366; 
-  --color-amber: #F2BA63; 
-  --color-bone: #FFFFFF; /* Pure White (Primary Text) */
-  --color-boneDim: #D6D6D6; /* Bright Silver/Grey (Secondary Text) */
-  --color-gold: #D4B483; 
-  --color-deviRed: #A63030;
+  /* Earthy Colors (Warmer, less dark green) */
+  --color-forest: #202619; /* Warm Olive Dark */
+  --color-forestDark: #1A1F14;
+  --color-soil: #382C24; /* Richer Wet Soil */
+  --color-charcoal: #2A2522; /* Charcoal Brown */
+  --color-moss: #505E3C; /* Olive Moss */
+  --color-clay: #A3624D; /* Warm Clay */
+  --color-umber: #8F5438; /* Burnt Umber */
+  --color-copper: #BD7C52; /* Aged Copper */
+  --color-sandstone: #D1B89C; /* Sandstone */
+  --color-linen: #E5DAC6; /* Soft Linen */
+  
+  /* Highlights */
+  --color-softGold: #D4BA88; 
+  --color-mutedBeige: #C7B599;
+  --color-warmIvory: #F2EBDC;
+  --color-olive: #738A4A;
+  
+  --color-bone: #F2EBDC; /* Primary Text - Warm Ivory */
+  --color-boneDim: #C7B599; /* Secondary Text - Muted Beige */
 
   --font-burowai: var(--font-burowai), serif;
   --font-galacthic: var(--font-galacthic), serif;
-  --font-quicksand: var(--font-quicksand), sans-serif;
+  --font-cormorant: var(--font-cormorant), serif;
   --font-devanagari: var(--font-devanagari), serif;
 
-  --animate-flicker: flicker 4s ease-in-out infinite;
-  --animate-drift: drift 9s ease-in-out infinite;
-  --animate-rotateRay: rotateRay 30s linear infinite;
+  --animate-drift: drift 20s ease-in-out infinite;
+  --animate-breathe: breathe 10s ease-in-out infinite;
+  --animate-float: float 8s ease-in-out infinite;
 
-  @keyframes flicker {
-    0%, 100% { opacity: 0.8; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.95); }
-  }
   @keyframes drift {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(15px, -15px); }
+    0%, 100% { transform: translate(0, 0) scale(1.05); }
+    50% { transform: translate(15px, -10px) scale(1.08); }
   }
-  @keyframes rotateRay {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  @keyframes breathe {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.03); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
 }
 
+/* Texture Overlay */
+.texture-paper {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+  opacity: 0.025;
+  mix-blend-mode: multiply;
+  z-index: 50;
+}
+
+/* Tactile Buttons */
+.btn-tactile {
+  background: linear-gradient(135deg, var(--color-umber), var(--color-copper));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-tactile::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.btn-tactile:hover::after {
+  left: 150%;
+}
+.btn-tactile:hover {
+  box-shadow: 0 6px 20px rgba(189, 124, 82, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
 body {
-  background-color: transparent;
+  background-color: var(--color-forestDark); /* Replaced void/transparent */
   color: var(--color-bone);
-  font-family: var(--font-quicksand), sans-serif;
-  overflow-x: hidden;
+  font-family: var(--font-inter-tight), sans-serif;
 }
 
 /* Soft Bloom Text Shadow (Terracotta for Light Theme) */

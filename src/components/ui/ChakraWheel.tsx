@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useRef, useState, useEffect } from 'react';
 import { gsap, Draggable, useGSAP } from '@/lib/gsap';
@@ -6,15 +6,15 @@ import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useAudioFeedback } from '@/lib/useAudioFeedback';
 
 const DEVIS = [
-  { name: 'Shailputri', color: '#E8792E', num: '१' }, 
-  { name: 'Brahmacharini', color: '#F2A93B', num: '२' }, 
-  { name: 'Chandraghanta', color: '#D4AF37', num: '३' }, 
-  { name: 'Kushmanda', color: '#98C87A', num: '४' }, 
-  { name: 'Skandamata', color: '#B65C35', num: '५' }, 
-  { name: 'Katyayani', color: '#E8792E', num: '६' },
-  { name: 'Kalaratri', color: '#F2A93B', num: '७' },
-  { name: 'Mahagauri', color: '#D4AF37', num: '८' },
-  { name: 'Siddhidatri', color: '#98C87A', num: '९' },
+  { name: 'Shailputri', color: '#E8792E', num: 'à¥§' }, 
+  { name: 'Brahmacharini', color: '#F2A93B', num: 'à¥¨' }, 
+  { name: 'Chandraghanta', color: '#D4AF37', num: 'à¥©' }, 
+  { name: 'Kushmanda', color: '#98C87A', num: 'à¥ª' }, 
+  { name: 'Skandamata', color: '#B65C35', num: 'à¥«' }, 
+  { name: 'Katyayani', color: '#E8792E', num: 'à¥¬' },
+  { name: 'Kalaratri', color: '#F2A93B', num: 'à¥­' },
+  { name: 'Mahagauri', color: '#D4AF37', num: 'à¥®' },
+  { name: 'Siddhidatri', color: '#98C87A', num: 'à¥¯' },
 ];
 
 export function ChakraWheel() {
@@ -91,7 +91,7 @@ export function ChakraWheel() {
     return (
       <div className="text-center py-20">
         <h3 className="font-galacthic text-3xl text-gold mb-4">THE CHAKRA TURNS</h3>
-        <p className="font-quicksand text-boneDim max-w-lg mx-auto">
+        <p className="font-cormorant text-boneDim max-w-lg mx-auto">
           Nine nights, nine gateways. The spiral moves inward.
         </p>
       </div>
@@ -158,7 +158,7 @@ export function ChakraWheel() {
         </div>
       </div>
       
-      <div className="mt-8 font-quicksand text-white uppercase tracking-[0.2em] text-sm font-medium">
+      <div className="mt-8 font-cormorant text-white uppercase tracking-[0.2em] text-sm font-medium">
         Drag to turn the Chakra
       </div>
     </div>

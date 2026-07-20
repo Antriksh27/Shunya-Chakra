@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
@@ -133,7 +133,7 @@ export function ScrollVideo() {
       <div 
         className={`absolute inset-0 flex flex-col items-center justify-center bg-void z-30 text-bone transition-opacity duration-1000 ${loadedPercent >= 100 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
       >
-        <span className="font-quicksand text-sm uppercase tracking-[0.3em] mb-4 text-boneDim">Loading Pilgrimage</span>
+        <span className="font-cormorant text-sm uppercase tracking-[0.3em] mb-4 text-boneDim">Loading Pilgrimage</span>
         <div className="w-64 h-1 bg-voidSofter rounded-full overflow-hidden">
           <div className="h-full bg-moss transition-all duration-300" style={{ width: `${loadedPercent}%` }} />
         </div>
