@@ -5,7 +5,7 @@ import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap';
 import Image from 'next/image';
 
 const STEPS = [
-  { id: 'name', label: 'Who approaches the circle?', type: 'text', placeholder: 'Your Name' },
+  { id: 'name', label: 'Enter your name to join the ritual', type: 'text', placeholder: 'Your Name' },
   { id: 'phone', label: 'What is your phone number?', type: 'tel', placeholder: 'Your Phone' },
   { id: 'email', label: 'What is your email address? (Optional)', type: 'email', placeholder: 'Your Email' }
 ];

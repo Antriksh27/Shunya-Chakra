@@ -9,21 +9,24 @@ export function AboutExperience() {
 
   const chapters = [
     {
-      title: "The Ground",
-      description: "Carved spaces that hold the energy of thousands. We build an altar of earth, ready to receive the devotion of the nine nights.",
-      image: "/images/exp_arch.png",
+      title: "SACRED ARCHITECTURE",
+      subtitle: "Conscious Space & Form",
+      description: "Nothing here is created by chance. Every path. Every structure. Every circle. Shaped with intention. A place that invites stillness, presence, and belonging.",
+      image: "/images/stone_texture.png",
       mask: "polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%)"
     },
     {
-      title: "The Garba",
-      description: "Rhythm designed to awaken ancestral memory. Around the fire, the divine feminine is honored through the timeless movement of the circle.",
-      image: "/images/exp_ritual.png",
+      title: "MUSIC, ART & RITUAL",
+      subtitle: "Ceremony as Living Art",
+      description: "Music is more than vibrations. Art is more than expression. Every rhythm, every creation, every ritual becomes part of a shared remembrance. A moment to slow down. To listen. To return.",
+      image: "/images/clay_texture.png",
       mask: "polygon(0% 10%, 100% 5%, 100% 100%, 0% 100%)"
     },
     {
-      title: "The Fire",
-      description: "Rooted deeply in tribal heritage. From the heat of the midnight lamps to the unyielding beat of the drums under a moonlit sky.",
-      image: "/images/exp_nature.png",
+      title: "NATURE & EARTH SPIRIT",
+      subtitle: "Rooted in Earth & Sky",
+      description: "The earth quietly shapes every moment of the gathering. Under open skies. Among ancient trees. Beside fire and earth. We remember what has always been waiting for us.",
+      image: "/images/moss_texture.png",
       mask: "polygon(0% 5%, 100% 12%, 100% 100%, 0% 100%)"
     }
   ];
@@ -113,11 +116,15 @@ export function AboutExperience() {
               {/* Title Content */}
               <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none">
                  
-
-                 {/* Massive Bleeding Typography */}
-                 <h2 className="font-burowai text-[clamp(50px,15vw,350px)] text-charcoal leading-[0.75] mix-blend-color-burn opacity-90 drop-shadow-sm text-center whitespace-nowrap mb-12 transform scale-x-[1.1]">
+                 {/* Massive Bleeding Typography (Slightly scaled down for longer words) */}
+                 <h2 className="font-burowai text-[clamp(40px,10vw,200px)] text-charcoal leading-[0.8] mix-blend-color-burn opacity-90 drop-shadow-sm text-center mb-4 transform scale-x-[1.1] uppercase">
                    {chapter.title}
                  </h2>
+
+                 {/* Subtitle */}
+                 <h3 className="font-cormorant italic text-[clamp(20px,3vw,40px)] text-warmIvory mb-12 font-bold drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)] text-center">
+                   {chapter.subtitle}
+                 </h3>
 
                  <p className="font-cormorant text-charcoal text-xl md:text-3xl leading-[1.8] max-w-3xl text-center font-bold drop-shadow-sm pointer-events-auto px-4">
                    {chapter.description}

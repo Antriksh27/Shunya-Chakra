@@ -37,16 +37,8 @@ export function InteractiveChakra() {
       0
     );
 
-    // 2. Manual Draggable Spin
-    Draggable.create(chakraRef.current, {
-      type: 'rotation',
-      onDragStart: () => setIsDragging(true),
-      onDragEnd: () => setIsDragging(false),
-      onDrag: function() {
-         // Create dust particles manually when dragging
-         createDustParticle();
-      }
-    });
+    // Removed Manual Draggable Spin to prevent blocking scroll on mobile.
+    // ScrollTrigger alone provides a beautiful spinning interaction.
 
     // 3. Dynamic Mouse Lighting
     const moveLight = (e: MouseEvent) => {
@@ -147,7 +139,7 @@ export function InteractiveChakra() {
               It is not a performance. It is a sacred ritual. It turns, it pulses, holding the ancestral memory of every barefoot step taken upon the earth. 
             </p>
             <p className="text-copper/80 text-xs md:text-sm uppercase tracking-[0.3em] font-bold">
-              {isDragging ? "The wheel turns." : "Scroll or drag to turn."}
+              Scroll to turn the wheel.
             </p>
           </div>
         </div>

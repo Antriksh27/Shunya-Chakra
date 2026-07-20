@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useRef, useState, useEffect } from 'react';
 import { gsap, Draggable, useGSAP } from '@/lib/gsap';
@@ -117,7 +117,7 @@ export function ChakraWheel() {
       </div>
 
       {/* The Draggable Wheel */}
-      <div className="relative w-[min(90vw,65vh)] h-[min(90vw,65vh)] max-w-[700px] max-h-[700px] mt-16">
+      <div className="relative w-[min(70vw,65vh)] h-[min(70vw,65vh)] md:w-[min(90vw,65vh)] md:h-[min(90vw,65vh)] max-w-[700px] max-h-[700px] mt-16">
         {/* Glow Ring Behind Wheel */}
         <div 
           ref={glowRef}

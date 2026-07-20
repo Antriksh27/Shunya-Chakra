@@ -133,12 +133,12 @@ export function ClosingInvitation() {
             />
           </div>
 
-          <h2 className="font-burowai text-[clamp(32px,7vw,90px)] text-warmIvory mb-6 tracking-wide drop-shadow-[0_0_20px_rgba(242,235,220,0.2)] leading-[0.9]">
-            The Nine Nights Approach
+          <h2 className="font-burowai text-[clamp(40px,8vw,110px)] text-warmIvory mb-2 tracking-wide drop-shadow-[0_0_20px_rgba(242,235,220,0.2)] leading-[0.9] uppercase text-center">
+            COMPLETE THE CHAKRA
           </h2>
           
-          <p className="font-cormorant text-copper text-lg mb-20 tracking-widest max-w-md mx-auto opacity-80 uppercase drop-shadow-[0_0_10px_rgba(189,124,82,0.3)]">
-            Will you answer the call?
+          <p className="font-cormorant text-copper text-xl mb-10 tracking-[0.2em] max-w-md mx-auto opacity-90 uppercase drop-shadow-[0_0_10px_rgba(189,124,82,0.5)] text-center">
+            An invitation to return to the source.
           </p>
 
           <MagneticButton 
