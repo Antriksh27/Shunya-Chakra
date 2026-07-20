@@ -19,7 +19,7 @@ export function AboutExperience() {
       title: "MUSIC, ART & RITUAL",
       subtitle: "Ceremony as Living Art",
       description: "Music is more than vibrations. Art is more than expression. Every rhythm, every creation, every ritual becomes part of a shared remembrance. A moment to slow down. To listen. To return.",
-      image: "/images/clay_texture.png",
+      image: "/images/wood_texture.png",
       mask: "polygon(0% 10%, 100% 5%, 100% 100%, 0% 100%)"
     },
     {
