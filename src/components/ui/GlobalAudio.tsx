@@ -74,16 +74,16 @@ export function GlobalAudio() {
             <p className="font-cormorant text-lg md:text-2xl text-warmIvory/70 mb-12 leading-relaxed">
               Every ritual begins with a vibration. To truly experience Shunya Chakra, we invite you to allow the sacred rhythm to guide your journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 w-full justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 w-full justify-center items-center mt-4">
               <button 
                 onClick={() => handleEnter(true)}
-                className="px-8 py-4 w-full sm:w-auto border border-warmIvory/30 hover:border-warmIvory/80 hover:bg-warmIvory/5 transition-all font-cormorant uppercase tracking-[0.2em] text-sm"
+                className="px-10 py-5 w-full sm:w-auto border border-warmIvory/40 hover:border-warmIvory/80 hover:bg-warmIvory/5 transition-all duration-700 ease-in-out rounded-[30%_70%_70%_30%/40%_60%_40%_60%] hover:rounded-[70%_30%_30%_70%/60%_40%_60%_40%] font-cormorant uppercase tracking-[0.2em] text-sm"
               >
                 Enter With Sound
               </button>
               <button 
                 onClick={() => handleEnter(false)}
-                className="px-8 py-4 w-full sm:w-auto border border-transparent hover:border-warmIvory/20 text-warmIvory/50 hover:text-warmIvory/80 transition-all font-cormorant uppercase tracking-[0.2em] text-sm"
+                className="px-10 py-5 w-full sm:w-auto border border-warmIvory/10 hover:border-warmIvory/40 text-warmIvory/60 hover:text-warmIvory/90 transition-all duration-700 ease-in-out rounded-[70%_30%_30%_70%/60%_40%_60%_40%] hover:rounded-[30%_70%_70%_30%/40%_60%_40%_60%] hover:bg-warmIvory/5 font-cormorant uppercase tracking-[0.2em] text-sm"
               >
                 Enter in Silence
               </button>
