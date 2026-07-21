@@ -14,8 +14,8 @@ export function ScrollSpiral() {
       scrollTrigger: {
         trigger: document.body,
         start: 'top top',
-        end: 'bottom bottom',
-        scrub: true,
+        end: 'bottom top',
+        scrub: 2.5,
       },
     });
   });

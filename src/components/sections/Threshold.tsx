@@ -15,6 +15,27 @@ export function Threshold() {
   const btnRef = useRef<HTMLButtonElement>(null);
 
   useGSAP(() => {
+    // 0. INTRO ANIMATION
+    const introTl = gsap.timeline({ paused: true });
+    
+    // Set initial hidden states
+    gsap.set(bgRef.current, { opacity: 0, scale: 1.05 });
+    gsap.set(fgRef.current, { opacity: 0 });
+    gsap.set(textRef.current, { opacity: 0, filter: 'blur(10px)', y: 20 });
+    gsap.set(btnRef.current, { opacity: 0, pointerEvents: 'none' });
+
+    // Fade everything in smoothly
+    introTl.to(bgRef.current, { opacity: 1, scale: 1, duration: 2.5, ease: "power2.out", clearProps: "opacity,scale" }, 0)
+           .to(fgRef.current, { opacity: 1, duration: 2.5, ease: "power2.out", clearProps: "opacity" }, 0.5)
+           .to(textRef.current, { opacity: 1, filter: 'blur(0px)', y: 0, duration: 2, ease: "power3.out", clearProps: "opacity,filter,transform" }, 1)
+           .to(btnRef.current, { opacity: 1, duration: 1.5, ease: "power2.inOut", clearProps: "opacity,pointerEvents" }, 1.5);
+
+    const handleEnter = () => {
+      introTl.play();
+    };
+
+    window.addEventListener('app-entered', handleEnter);
+
     // 1. PIN THE HERO SECTION
     // Pin it for a massive distance so it stays locked in the background 
     // while Waitlist slides over it and pins itself.
@@ -33,7 +54,7 @@ export function Threshold() {
         trigger: wrapperRef.current,
         start: "top top",
         end: "+=300", 
-        scrub: 1.5, 
+        scrub: 2.5, 
         // No pinning here!
       }
     });

@@ -17,9 +17,9 @@ export function Sanctuary() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: 'top top',
-        end: '+=400%', // 4 screens to allow for reading pauses
+        end: '+=150%', // 4 screens to allow for reading pauses
         pin: true,
-        scrub: 1, // Smooth scrub
+        scrub: 2.5, // Slow, smooth breathing scrub
       }
     });
 
@@ -129,7 +129,7 @@ export function Sanctuary() {
                  The Ritual Space
                </h2>
                <p className="font-cormorant text-warmIvory/70 text-lg md:text-xl leading-relaxed max-w-2xl drop-shadow-xl bg-forestDark/30 p-8 rounded-lg backdrop-blur-md border border-copper/10">
-                 An altar built from raw earth and devotion. Shadows dance on handcrafted stone, and the crackle of fire meets the rhythm of footsteps moving in sacred celebration.
+                 An altar built from raw earth and devotion. Shadows dance on handcrafted stone, and the glow of sacred earthen lamps meets the rhythm of footsteps moving in celebration.
                </p>
             </div>
           </div>

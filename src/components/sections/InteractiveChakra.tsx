@@ -21,9 +21,9 @@ export function InteractiveChakra() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: 'top top',
-        end: '+=200%', // Pin for a long time to allow spinning
+        end: '+=300%', // Pin for a long time to allow spinning
         pin: true,
-        scrub: 1, // Smooth scrub
+        scrub: 2.5, // Slow breathing scrub
       }
     });
 
@@ -131,7 +131,7 @@ export function InteractiveChakra() {
           </div>
 
           <h2 className="font-burowai text-[clamp(40px,10vw,140px)] text-warmIvory leading-[0.8] mb-10 drop-shadow-[0_10px_30px_rgba(0,0,0,0.9)]">
-            The Circle <br/>Never Breaks.
+            The Chakra <br/>Never Breaks.
           </h2>
           
           <div className="flex flex-col gap-8 font-cormorant text-warmIvory/80 text-lg md:text-xl leading-relaxed max-w-md drop-shadow-xl bg-forestDark/40 p-8 rounded-lg backdrop-blur-md border border-warmIvory/5">

@@ -11,7 +11,7 @@ export function Philosophy() {
     "For nine nights, the earth remembers.",
     "Shunya Chakra is not an escape. It is a return to the oldest rhythm we know.",
     "The sacred circle forms. The drums begin. Thousands move as one.",
-    "An altar carved from soil and fire, calling you to the living spirit of Navratri."
+    "An altar carved from raw earth and devotion, calling you to the living spirit of Navratri."
   ];
 
   useGSAP(() => {
@@ -23,9 +23,9 @@ export function Philosophy() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=400%", // 4 screens of scrolling reading time
+        end: "+=500%", 
         pin: true,
-        scrub: 1,
+        scrub: 2.5,
       }
     });
 
@@ -58,7 +58,7 @@ export function Philosophy() {
             trigger: containerRef.current,
             start: 'top bottom',
             end: 'top top',
-            scrub: true,
+            scrub: 2.5,
           }
         }
       );

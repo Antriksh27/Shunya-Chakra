@@ -82,9 +82,9 @@ export function ClosingInvitation() {
           ease: 'none',
           scrollTrigger: {
             trigger: containerRef.current,
-            start: 'top bottom',
-            end: 'top top',
-            scrub: true,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: 2.5,
           }
         }
       );

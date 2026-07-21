@@ -130,25 +130,25 @@ export function GlobalMenu() {
         {/* Decorative elements behind menu */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full bg-ember/5 blur-[120px] pointer-events-none" />
 
-        <ul ref={linksRef} className="flex flex-col items-start justify-center h-full max-w-7xl mx-auto w-full px-8 md:px-24 gap-[clamp(8px,1.5vh,16px)] perspective-1000 relative z-10">
+        <ul ref={linksRef} className="flex flex-col items-start justify-center min-h-full py-24 max-w-7xl mx-auto w-full px-6 md:px-24 gap-[clamp(16px,2.5vh,32px)] perspective-1000 relative z-10">
           {MENU_LINKS.map((link, index) => (
-            <li key={link.id} className="opacity-0 group">
+            <li key={link.id} className="opacity-0 group w-full">
               <button
                 onClick={() => handleScrollTo(link.id)}
-                className="font-cormorant text-[clamp(28px,7vh,90px)] uppercase tracking-[0.15em] text-bone/40 hover:text-warmIvory transition-all duration-700 ease-out focus:outline-none text-left flex items-baseline gap-6 md:gap-12 group-hover:translate-x-6"
+                className="font-cormorant text-[clamp(22px,5.5vh,90px)] md:text-[clamp(40px,7vh,90px)] uppercase tracking-[0.05em] md:tracking-[0.15em] text-bone/40 hover:text-warmIvory transition-all duration-700 ease-out focus:outline-none text-left flex items-baseline gap-4 md:gap-12 group-hover:translate-x-2 md:group-hover:translate-x-6 w-full break-words"
                 data-cursor="interactive"
               >
-                <span className="text-[clamp(12px,1.5vh,16px)] font-sans opacity-40 font-light tracking-[0.3em] -translate-y-4 md:-translate-y-8">
+                <span className="text-[clamp(10px,1.5vh,16px)] font-sans opacity-40 font-light tracking-[0.3em] shrink-0 -translate-y-1 md:-translate-y-8">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                {link.label}
+                <span className="flex-1 leading-tight">{link.label}</span>
               </button>
             </li>
           ))}
         </ul>
         
         {/* Footer info in menu */}
-        <div className="absolute bottom-8 font-cormorant text-boneDim/50 text-xs tracking-widest uppercase">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full text-center font-cormorant text-boneDim/50 text-xs tracking-widest uppercase">
           Shunya Chakra
         </div>
       </div>

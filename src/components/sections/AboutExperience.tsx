@@ -19,13 +19,13 @@ export function AboutExperience() {
       title: "MUSIC, ART & RITUAL",
       subtitle: "Ceremony as Living Art",
       description: "Music is more than vibrations. Art is more than expression. Every rhythm, every creation, every ritual becomes part of a shared remembrance. A moment to slow down. To listen. To return.",
-      image: "/images/wood_texture.png",
+      image: "/images/drum_texture.png",
       mask: "polygon(0% 10%, 100% 5%, 100% 100%, 0% 100%)"
     },
     {
       title: "NATURE & EARTH SPIRIT",
       subtitle: "Rooted in Earth & Sky",
-      description: "The earth quietly shapes every moment of the gathering. Under open skies. Among ancient trees. Beside fire and earth. We remember what has always been waiting for us.",
+      description: "The earth quietly shapes every moment of the gathering. Under open skies. Among ancient trees. Rooted in the sacred earth. We remember what has always been waiting for us.",
       image: "/images/moss_texture.png",
       mask: "polygon(0% 5%, 100% 12%, 100% 100%, 0% 100%)"
     }
@@ -42,7 +42,7 @@ export function AboutExperience() {
         start: "top top",
         end: "+=300%", // 3 screens of scrolling for 3 cards
         pin: true,
-        scrub: 1,
+        scrub: 2.5,
       }
     });
 
@@ -122,11 +122,11 @@ export function AboutExperience() {
                  </h2>
 
                  {/* Subtitle */}
-                 <h3 className="font-cormorant italic text-[clamp(20px,3vw,40px)] text-warmIvory mb-12 font-bold drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)] text-center">
+                 <h3 className="font-cormorant italic text-[clamp(20px,3vw,40px)] text-warmIvory mb-12 drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)] text-center">
                    {chapter.subtitle}
                  </h3>
 
-                 <p className="font-cormorant text-charcoal text-xl md:text-3xl leading-[1.8] max-w-3xl text-center font-bold drop-shadow-sm pointer-events-auto px-4">
+                 <p className="font-cormorant text-charcoal text-xl md:text-3xl leading-[1.8] max-w-3xl text-center drop-shadow-sm pointer-events-auto px-4">
                    {chapter.description}
                  </p>
                  

@@ -12,7 +12,7 @@ export function LenisProvider({ children }: { children: ReactNode }) {
     if (reducedMotion) return;
 
     const lenis = new Lenis({
-      duration: 1.6, // Increased for a heavy, cinematic smooth scroll
+      duration: 3.0, // Increased for a heavy, cinematic, breathing smooth scroll
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
